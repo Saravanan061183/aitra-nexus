@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    --background: 220 30% 6%;
-    --foreground: 210 40% 98%;
+    --background: 210 20% 98%;
+    --foreground: 220 30% 12%;
 
-    --card: 216 25% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 12%;
 
-    --popover: 216 25% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 12%;
 
-    --primary: 191 100% 50%;
-    --primary-foreground: 220 30% 6%;
+    --primary: 210 100% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 277 40% 52%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 60% 95%;
+    --secondary-foreground: 210 100% 35%;
 
-    --muted: 216 20% 16%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 277 40% 52%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 216 20% 18%;
-    --input: 216 20% 18%;
-    --ring: 191 100% 50%;
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 45%;
 
     --radius: 0.75rem;
 
-    --neon-blue: 191 100% 50%;
-    --neon-purple: 277 40% 52%;
-    --slate-text: 215 20% 65%;
-    --surface: 216 25% 11%;
+    --neon-blue: 210 100% 45%;
+    --neon-purple: 220 70% 55%;
+    --slate-text: 215 15% 45%;
+    --surface: 210 20% 97%;
 
-    --gradient-neon: linear-gradient(135deg, hsl(191 100% 50%), hsl(277 40% 52%));
-    --gradient-neon-reverse: linear-gradient(135deg, hsl(277 40% 52%), hsl(191 100% 50%));
-    --shadow-neon-blue: 0 0 30px -5px hsl(191 100% 50% / 0.4);
-    --shadow-neon-purple: 0 0 30px -5px hsl(277 40% 52% / 0.4);
-    --glow-blue: 0 0 60px -15px hsl(191 100% 50% / 0.5);
-    --glow-purple: 0 0 60px -15px hsl(277 40% 52% / 0.5);
+    --gradient-neon: linear-gradient(135deg, hsl(210 100% 45%), hsl(220 70% 55%));
+    --gradient-neon-reverse: linear-gradient(135deg, hsl(220 70% 55%), hsl(210 100% 45%));
+    --shadow-neon-blue: 0 4px 20px -5px hsl(210 100% 45% / 0.2);
+    --shadow-neon-purple: 0 4px 20px -5px hsl(220 70% 55% / 0.2);
+    --glow-blue: 0 8px 40px -10px hsl(210 100% 45% / 0.15);
+    --glow-purple: 0 8px 40px -10px hsl(220 70% 55% / 0.15);
   }
 }
 
@@ -67,11 +67,8 @@
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-neon);
   }
-  .border-gradient-neon {
-    border-image: var(--gradient-neon) 1;
-  }
   .glass {
-    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+    @apply bg-card border border-border/60 shadow-sm;
   }
   .glow-blue {
     box-shadow: var(--glow-blue);
