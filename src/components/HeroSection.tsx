@@ -1,19 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img src={heroBg} alt="" className="w-full h-full object-cover opacity-40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-      </div>
-
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-blue/10 rounded-full blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/10 rounded-full blur-[120px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-secondary/30 to-background">
+      {/* Decorative circles */}
+      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/5 rounded-full blur-[80px]" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
@@ -21,18 +14,21 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-display font-medium tracking-widest uppercase border border-primary/30 rounded-full text-primary">
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-display font-medium tracking-widest uppercase border border-primary/30 rounded-full text-primary bg-primary/5">
             Center for Robotics & AI
           </span>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-4 text-foreground">
             Future Tech Starts
             <br />
             <span className="text-gradient-neon">Here in Madurai</span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10">
+          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-3">
             Learn Robotics, AI, IoT, Drone Technology & Build Real-World Skills
+          </p>
+          <p className="max-w-xl mx-auto text-base font-display font-semibold text-primary mb-10">
+            🌍 International Quality — Now in Your Hometown
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
